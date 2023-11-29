@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbd4b7b61e694b8884250fb9c971828, type: 3}
+  m_Name: Bow
+  m_EditorClassIdentifier: 
+  weaponName:
+    content: Recurved Bow
+    postProcess: 0
+    translationID: 0
+  weaponDesc:
+    content: Used by silent assassins
+    postProcess: 0
+    translationID: 0
+  defaultAmmo: {fileID: 11400000, guid: 73a14bd75d3604318b1ed52bddd76c1e, type: 2}
+  audioDraw: {fileID: 8300000, guid: 38f3ee2e068dc459db28046853754752, type: 3}
+  audioHolster: {fileID: 8300000, guid: 901158e8e8ec44e43879f4b902dd5c38, type: 3}
+  ease:
+    state: {fileID: 11400000, guid: ee94b34fd618946fea06b4d942694082, type: 2}
+    mask: {fileID: 0}
+    upperBodyRotation: {x: 0, y: 0, z: 0}
+    lowerBodyRotation: 0
+    stabilizeBody: 0
+  pitchOffset: 0
+  aiming:
+    state: {fileID: 11400000, guid: 933b3e05ead3b4f5fb287fb7b017e3b8, type: 2}
+    mask: {fileID: 31900000, guid: aafe279359cb341a3b058eafb4824481, type: 2}
+    upperBodyRotation: {x: 0, y: 10, z: 0}
+    lowerBodyRotation: 64
+    stabilizeBody: 1
+  prefab: {fileID: 5897386602876546450, guid: c7a8c7171c11145ff8bdfa3c8ed93750, type: 3}
+  attachment: 17
+  prefabPosition: {x: 0.03, y: -0.025, z: 0}
+  prefabRotation: {x: 0, y: 0, z: 0}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbd4b7b61e694b8884250fb9c971828, type: 3}
+  m_Name: Grenade
+  m_EditorClassIdentifier: 
+  weaponName:
+    content: Grenade
+    postProcess: 0
+    translationID: 0
+  weaponDesc:
+    content: Throw it and goes Ka-Boom!
+    postProcess: 0
+    translationID: 0
+  defaultAmmo: {fileID: 11400000, guid: 5864a0207b6d34eb18ffa80842a8acbc, type: 2}
+  audioDraw: {fileID: 8300000, guid: 9a8380c625b5d44f0830f6359b5356a4, type: 3}
+  audioHolster: {fileID: 8300000, guid: a697e7211857643ad9395e4b33be4114, type: 3}
+  ease:
+    state: {fileID: 11400000, guid: def669fa2ca3f4d42b210fbe6d601c4a, type: 2}
+    mask: {fileID: 0}
+    upperBodyRotation: {x: 0, y: 0, z: 0}
+    lowerBodyRotation: 0
+    stabilizeBody: 0
+  pitchOffset: 0
+  aiming:
+    state: {fileID: 11400000, guid: b1a21499afe90425c943e88b6fa48389, type: 2}
+    mask: {fileID: 31900000, guid: 0571f4437486c437db4bc60dac8a7faa, type: 2}
+    upperBodyRotation: {x: 0, y: 0, z: 0}
+    lowerBodyRotation: 25
+    stabilizeBody: 1
+  prefab: {fileID: 3088297756465824008, guid: 4ef23e9a4bfa64bb2988dd7a5858cd8b, type: 3}
+  attachment: 17
+  prefabPosition: {x: 0, y: 0, z: 0}
+  prefabRotation: {x: 0, y: 0, z: 0}

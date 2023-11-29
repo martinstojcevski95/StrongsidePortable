@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cbd861b156b4342bb925cd2f07da25, type: 3}
+  m_Name: com.gamecreator.skins.dialogue.pixelfantasy
+  m_EditorClassIdentifier: 
+  module:
+    moduleID: com.gamecreator.skins.dialogue.pixelfantasy
+    version:
+      major: 1
+      minor: 0
+      patch: 1
+    displayName: Pixel Fantasy Skin
+    description: Give your game an old-school look with this fantasy dialogue skin.
+    category: Dialogue Skin
+    dependencies:
+    - moduleID: com.gamecreator.module.dialogue
+      version:
+        major: 1
+        minor: 0
+        patch: 1
+    tags:
+    - skin
+    - dialogue
+    authorName: Marti-Joan Nogue Coll
+    authorMail: marti@catsoft-studios.com
+    authorSite: https://gamecreator.io
+    includesData: 0
+    codePaths:
+    - Assets/Plugins/GameCreator/DialogueSkinPixelFantasy/
+    dataPaths: []
+  adminLogin: 1
+  adminOpen: 1

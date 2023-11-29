@@ -1,0 +1,1045 @@
+fileFormatVersion: 2
+guid: 271032aed7ed92a4a81a4822505e9779
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: MaleFigure1
+  - first:
+      1: 100002
+    second: polySurface17
+  - first:
+      1: 100004
+    second: polySurface25
+  - first:
+      1: 100006
+    second: polySurface30
+  - first:
+      1: 100008
+    second: //RootNode
+  - first:
+      1: 100010
+    second: polySurface32
+  - first:
+      1: 100012
+    second: Left_Shoe
+  - first:
+      1: 100014
+    second: polySurface35
+  - first:
+      1: 100016
+    second: Right_Shoe
+  - first:
+      1: 100018
+    second: Body
+  - first:
+      1: 100020
+    second: Helmet
+  - first:
+      1: 100022
+    second: LeftEyeball
+  - first:
+      1: 100024
+    second: RightEyeball
+  - first:
+      1: 100026
+    second: group1
+  - first:
+      1: 100028
+    second: pasted__Head
+  - first:
+      1: 100030
+    second: Head
+  - first:
+      1: 100032
+    second: Helmet_Ext_Helmet_US_Football_Player
+  - first:
+      1: 100034
+    second: Helmet_US_Football_Player
+  - first:
+      1: 100036
+    second: US_Football_Player_Body
+  - first:
+      1: 100038
+    second: US_Football_Player_Head
+  - first:
+      1: 100040
+    second: US_Football_Player_LeftEyeball
+  - first:
+      1: 100042
+    second: US_Football_Player_RightEyeball
+  - first:
+      1: 100044
+    second: Head 1
+  - first:
+      1: 100046
+    second: Head_Geo
+  - first:
+      1: 100048
+    second: Lt_ Calf
+  - first:
+      1: 100050
+    second: Lt_ Finger01_Root
+  - first:
+      1: 100052
+    second: Lt_ Forearm
+  - first:
+      1: 100054
+    second: Lt_ Hand
+  - first:
+      1: 100056
+    second: Lt_ ThumbRoot
+  - first:
+      1: 100058
+    second: Lt_Clavicle
+  - first:
+      1: 100060
+    second: Lt_Finger01_End
+  - first:
+      1: 100062
+    second: Lt_Finger02_End
+  - first:
+      1: 100064
+    second: Lt_Finger02_Root
+  - first:
+      1: 100066
+    second: Lt_Foot
+  - first:
+      1: 100068
+    second: Lt_Thigh
+  - first:
+      1: 100070
+    second: Lt_Thumb_End
+  - first:
+      1: 100072
+    second: Lt_Toe_End
+  - first:
+      1: 100074
+    second: Lt_Toe_Root
+  - first:
+      1: 100076
+    second: Lt_UpperArm
+  - first:
+      1: 100078
+    second: Neck
+  - first:
+      1: 100080
+    second: Pelvis
+  - first:
+      1: 100082
+    second: Root
+  - first:
+      1: 100084
+    second: Rt_ Foot
+  - first:
+      1: 100086
+    second: Rt_ UpperArm
+  - first:
+      1: 100088
+    second: Rt_Calf
+  - first:
+      1: 100090
+    second: Rt_Clavicle
+  - first:
+      1: 100092
+    second: Rt_Finger01_End
+  - first:
+      1: 100094
+    second: Rt_Finger01_Root
+  - first:
+      1: 100096
+    second: Rt_Finger02_End
+  - first:
+      1: 100098
+    second: Rt_Finger02_Root
+  - first:
+      1: 100100
+    second: Rt_Forearm
+  - first:
+      1: 100102
+    second: Rt_Hand
+  - first:
+      1: 100104
+    second: Rt_Thigh
+  - first:
+      1: 100106
+    second: Rt_Thumb_End
+  - first:
+      1: 100108
+    second: Rt_ThumbRoot
+  - first:
+      1: 100110
+    second: Rt_Toe_End
+  - first:
+      1: 100112
+    second: Rt_Toe_Root
+  - first:
+      1: 100114
+    second: Spine01
+  - first:
+      1: 100116
+    second: Spine02
+  - first:
+      1: 100118
+    second: Spine03
+  - first:
+      1: 100120
+    second: Left_Eyeball
+  - first:
+      1: 100122
+    second: Head_Obj
+  - first:
+      4: 400000
+    second: MaleFigure1
+  - first:
+      4: 400002
+    second: polySurface17
+  - first:
+      4: 400004
+    second: polySurface25
+  - first:
+      4: 400006
+    second: polySurface30
+  - first:
+      4: 400008
+    second: //RootNode
+  - first:
+      4: 400010
+    second: polySurface32
+  - first:
+      4: 400012
+    second: Left_Shoe
+  - first:
+      4: 400014
+    second: polySurface35
+  - first:
+      4: 400016
+    second: Right_Shoe
+  - first:
+      4: 400018
+    second: Body
+  - first:
+      4: 400020
+    second: Helmet
+  - first:
+      4: 400022
+    second: LeftEyeball
+  - first:
+      4: 400024
+    second: RightEyeball
+  - first:
+      4: 400026
+    second: group1
+  - first:
+      4: 400028
+    second: pasted__Head
+  - first:
+      4: 400030
+    second: Head
+  - first:
+      4: 400032
+    second: Helmet_Ext_Helmet_US_Football_Player
+  - first:
+      4: 400034
+    second: Helmet_US_Football_Player
+  - first:
+      4: 400036
+    second: US_Football_Player_Body
+  - first:
+      4: 400038
+    second: US_Football_Player_Head
+  - first:
+      4: 400040
+    second: US_Football_Player_LeftEyeball
+  - first:
+      4: 400042
+    second: US_Football_Player_RightEyeball
+  - first:
+      4: 400044
+    second: Head 1
+  - first:
+      4: 400046
+    second: Head_Geo
+  - first:
+      4: 400048
+    second: Lt_ Calf
+  - first:
+      4: 400050
+    second: Lt_ Finger01_Root
+  - first:
+      4: 400052
+    second: Lt_ Forearm
+  - first:
+      4: 400054
+    second: Lt_ Hand
+  - first:
+      4: 400056
+    second: Lt_ ThumbRoot
+  - first:
+      4: 400058
+    second: Lt_Clavicle
+  - first:
+      4: 400060
+    second: Lt_Finger01_End
+  - first:
+      4: 400062
+    second: Lt_Finger02_End
+  - first:
+      4: 400064
+    second: Lt_Finger02_Root
+  - first:
+      4: 400066
+    second: Lt_Foot
+  - first:
+      4: 400068
+    second: Lt_Thigh
+  - first:
+      4: 400070
+    second: Lt_Thumb_End
+  - first:
+      4: 400072
+    second: Lt_Toe_End
+  - first:
+      4: 400074
+    second: Lt_Toe_Root
+  - first:
+      4: 400076
+    second: Lt_UpperArm
+  - first:
+      4: 400078
+    second: Neck
+  - first:
+      4: 400080
+    second: Pelvis
+  - first:
+      4: 400082
+    second: Root
+  - first:
+      4: 400084
+    second: Rt_ Foot
+  - first:
+      4: 400086
+    second: Rt_ UpperArm
+  - first:
+      4: 400088
+    second: Rt_Calf
+  - first:
+      4: 400090
+    second: Rt_Clavicle
+  - first:
+      4: 400092
+    second: Rt_Finger01_End
+  - first:
+      4: 400094
+    second: Rt_Finger01_Root
+  - first:
+      4: 400096
+    second: Rt_Finger02_End
+  - first:
+      4: 400098
+    second: Rt_Finger02_Root
+  - first:
+      4: 400100
+    second: Rt_Forearm
+  - first:
+      4: 400102
+    second: Rt_Hand
+  - first:
+      4: 400104
+    second: Rt_Thigh
+  - first:
+      4: 400106
+    second: Rt_Thumb_End
+  - first:
+      4: 400108
+    second: Rt_ThumbRoot
+  - first:
+      4: 400110
+    second: Rt_Toe_End
+  - first:
+      4: 400112
+    second: Rt_Toe_Root
+  - first:
+      4: 400114
+    second: Spine01
+  - first:
+      4: 400116
+    second: Spine02
+  - first:
+      4: 400118
+    second: Spine03
+  - first:
+      4: 400120
+    second: Left_Eyeball
+  - first:
+      4: 400122
+    second: Head_Obj
+  - first:
+      23: 2300000
+    second: MaleFigure1
+  - first:
+      23: 2300002
+    second: polySurface17
+  - first:
+      23: 2300004
+    second: polySurface25
+  - first:
+      23: 2300006
+    second: polySurface30
+  - first:
+      23: 2300008
+    second: polySurface32
+  - first:
+      23: 2300010
+    second: Left_Shoe
+  - first:
+      23: 2300012
+    second: polySurface35
+  - first:
+      23: 2300014
+    second: Right_Shoe
+  - first:
+      23: 2300016
+    second: Body
+  - first:
+      23: 2300018
+    second: Helmet
+  - first:
+      23: 2300020
+    second: LeftEyeball
+  - first:
+      23: 2300022
+    second: RightEyeball
+  - first:
+      23: 2300024
+    second: pasted__Head
+  - first:
+      23: 2300026
+    second: Head
+  - first:
+      23: 2300028
+    second: Helmet_Ext_Helmet_US_Football_Player
+  - first:
+      23: 2300030
+    second: Helmet_US_Football_Player
+  - first:
+      23: 2300032
+    second: US_Football_Player_Body
+  - first:
+      23: 2300034
+    second: US_Football_Player_Head
+  - first:
+      23: 2300036
+    second: US_Football_Player_LeftEyeball
+  - first:
+      23: 2300038
+    second: US_Football_Player_RightEyeball
+  - first:
+      23: 2300040
+    second: Head 1
+  - first:
+      23: 2300042
+    second: Left_Eyeball
+  - first:
+      33: 3300000
+    second: MaleFigure1
+  - first:
+      33: 3300002
+    second: polySurface17
+  - first:
+      33: 3300004
+    second: polySurface25
+  - first:
+      33: 3300006
+    second: polySurface30
+  - first:
+      33: 3300008
+    second: polySurface32
+  - first:
+      33: 3300010
+    second: Left_Shoe
+  - first:
+      33: 3300012
+    second: polySurface35
+  - first:
+      33: 3300014
+    second: Right_Shoe
+  - first:
+      33: 3300016
+    second: Body
+  - first:
+      33: 3300018
+    second: Helmet
+  - first:
+      33: 3300020
+    second: LeftEyeball
+  - first:
+      33: 3300022
+    second: RightEyeball
+  - first:
+      33: 3300024
+    second: pasted__Head
+  - first:
+      33: 3300026
+    second: Head
+  - first:
+      33: 3300028
+    second: Helmet_Ext_Helmet_US_Football_Player
+  - first:
+      33: 3300030
+    second: Helmet_US_Football_Player
+  - first:
+      33: 3300032
+    second: US_Football_Player_Body
+  - first:
+      33: 3300034
+    second: US_Football_Player_Head
+  - first:
+      33: 3300036
+    second: US_Football_Player_LeftEyeball
+  - first:
+      33: 3300038
+    second: US_Football_Player_RightEyeball
+  - first:
+      33: 3300040
+    second: Head 1
+  - first:
+      33: 3300042
+    second: Left_Eyeball
+  - first:
+      43: 4300000
+    second: polySurface17
+  - first:
+      43: 4300002
+    second: polySurface25
+  - first:
+      43: 4300004
+    second: polySurface30
+  - first:
+      43: 4300006
+    second: MaleFigure1
+  - first:
+      43: 4300008
+    second: polySurface32
+  - first:
+      43: 4300010
+    second: polySurface35
+  - first:
+      43: 4300012
+    second: Right_Shoe
+  - first:
+      43: 4300014
+    second: Left_Shoe
+  - first:
+      43: 4300016
+    second: Helmet
+  - first:
+      43: 4300018
+    second: Body
+  - first:
+      43: 4300020
+    second: RightEyeball
+  - first:
+      43: 4300022
+    second: LeftEyeball
+  - first:
+      43: 4300024
+    second: pasted__Head
+  - first:
+      43: 4300026
+    second: Head
+  - first:
+      43: 4300028
+    second: Helmet_Ext_Helmet_US_Football_Player
+  - first:
+      43: 4300030
+    second: Helmet_US_Football_Player
+  - first:
+      43: 4300032
+    second: US_Football_Player_Head
+  - first:
+      43: 4300034
+    second: US_Football_Player_LeftEyeball
+  - first:
+      43: 4300036
+    second: US_Football_Player_RightEyeball
+  - first:
+      43: 4300038
+    second: US_Football_Player_Body
+  - first:
+      43: 4300040
+    second: Left_Eyeball
+  - first:
+      43: 4300042
+    second: Head_Obj
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
+  - first:
+      137: 13700002
+    second: Head
+  - first:
+      137: 13700004
+    second: Head_Obj
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyeball
+    second: {fileID: 2100000, guid: 57f7b65f00e167d4f93aededb076ff89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Helmet_Mat
+    second: {fileID: 2100000, guid: 7e94738120c15d549b773efefb08e932, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USFootballPlayer
+    second: {fileID: 2100000, guid: 057c1547a5a91f14b8ebf9a9d0c51f04, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Head_Geo
+        weight: 1
+      - path: Head_Geo/Head
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Pelvis
+        weight: 1
+      - path: Root/Pelvis/Spine01
+        weight: 1
+      - path: Root/Pelvis/Spine01/Lt_Thigh
+        weight: 1
+      - path: Root/Pelvis/Spine01/Lt_Thigh/Lt_ Calf
+        weight: 1
+      - path: Root/Pelvis/Spine01/Lt_Thigh/Lt_ Calf/Lt_Foot
+        weight: 1
+      - path: Root/Pelvis/Spine01/Lt_Thigh/Lt_ Calf/Lt_Foot/Lt_Toe_Root
+        weight: 1
+      - path: Root/Pelvis/Spine01/Lt_Thigh/Lt_ Calf/Lt_Foot/Lt_Toe_Root/Lt_Toe_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Rt_Thigh
+        weight: 1
+      - path: Root/Pelvis/Spine01/Rt_Thigh/Rt_Calf
+        weight: 1
+      - path: Root/Pelvis/Spine01/Rt_Thigh/Rt_Calf/Rt_ Foot
+        weight: 1
+      - path: Root/Pelvis/Spine01/Rt_Thigh/Rt_Calf/Rt_ Foot/Rt_Toe_Root
+        weight: 1
+      - path: Root/Pelvis/Spine01/Rt_Thigh/Rt_Calf/Rt_ Foot/Rt_Toe_Root/Rt_Toe_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Head 1
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Head 1/Helmet
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Head 1/LeftEyeball
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Head 1/RightEyeball
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand/Lt_ Finger01_Root
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand/Lt_ Finger01_Root/Lt_Finger01_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand/Lt_ ThumbRoot
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand/Lt_ ThumbRoot/Lt_Thumb_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand/Lt_Finger02_Root
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Lt_Clavicle/Lt_UpperArm/Lt_
+          Forearm/Lt_ Hand/Lt_Finger02_Root/Lt_Finger02_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand/Rt_Finger01_Root
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand/Rt_Finger01_Root/Rt_Finger01_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand/Rt_Finger02_Root
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand/Rt_Finger02_Root/Rt_Finger02_End
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand/Rt_ThumbRoot
+        weight: 1
+      - path: Root/Pelvis/Spine01/Spine02/Spine03/Neck/Rt_Clavicle/Rt_ UpperArm/Rt_Forearm/Rt_Hand/Rt_ThumbRoot/Rt_Thumb_End
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: 1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: US_Football_Player_Generic(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: US_Football_Player_Generic(Clone)
+      position: {x: 0.19277804, y: 0.08029261, z: 0.20845601}
+      rotation: {x: -0.09040205, y: 0.010958422, z: 0.119837366, w: 0.98860836}
+      scale: {x: 0.009995501, y: 0.009995501, z: 0.009995501}
+    - name: Head_Geo
+      parentName: US_Football_Player_Generic(Clone)
+      position: {x: -0.00051677227, y: 1.9193326, z: -0.028251648}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_Obj
+      parentName: Head_Geo
+      position: {x: -0.00026968482, y: -0.011278711, z: -1.9113849}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.009995501, y: 0.009995501, z: 0.009995501}
+    - name: Root
+      parentName: US_Football_Player_Generic(Clone)
+      position: {x: -0.0000000012612626, y: 1.0801753, z: -0.028854324}
+      rotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Pelvis
+      parentName: Root
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.5, y: 0.5, z: 0.4999993, w: 0.5000007}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Spine01
+      parentName: Pelvis
+      position: {x: -0.12906218, y: -0.00013075955, z: 0.00000017916466}
+      rotation: {x: -0.000002080476, y: 0.000000693676, z: -0.000398159, w: 0.99999994}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Lt_Thigh
+      parentName: Spine01
+      position: {x: 0.12906206, y: 0.00023325719, z: 0.11678357}
+      rotation: {x: 0.03790442, y: 0.9989202, z: -0.003584177, w: 0.026624257}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Lt_ Calf
+      parentName: Lt_Thigh
+      position: {x: -0.5655786, y: 0.000000007450581, z: 0.000000014901161}
+      rotation: {x: -1.300938e-10, y: -0.000000003730291, z: 0.027554484, w: 0.9996203}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Lt_Foot
+      parentName: Lt_ Calf
+      position: {x: -0.38145265, y: 0, z: 0}
+      rotation: {x: -0.081113026, y: 0.031793073, z: -0.063513204, w: 0.994171}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Lt_Toe_Root
+      parentName: Lt_Foot
+      position: {x: -0.10899288, y: 0.15237592, z: 0.009602115}
+      rotation: {x: -0.000000020722668, y: 0.000000010185954, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lt_Toe_End
+      parentName: Lt_Toe_Root
+      position: {x: -0.06478597, y: 0.0000000018626451, z: 0}
+      rotation: {x: 1.3234891e-23, y: -0.0000000074505815, z: 1.7763568e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rt_Thigh
+      parentName: Spine01
+      position: {x: 0.12906206, y: 0.00023390539, z: -0.11678355}
+      rotation: {x: 0.026604868, y: 0.99929863, z: 0.0045058248, w: -0.02596508}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: Rt_Calf
+      parentName: Rt_Thigh
+      position: {x: -0.56557846, y: 0, z: 0.000000014901161}
+      rotation: {x: 3.6144923e-10, y: 0.000000001885641, z: 0.055562247, w: 0.9984552}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+    - name: Rt_ Foot
+      parentName: Rt_Calf
+      position: {x: -0.38145268, y: 0.000000014901161, z: -0.000000014901161}
+      rotation: {x: 0.0552004, y: -0.030454984, z: -0.08100084, w: 0.9947182}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Rt_Toe_Root
+      parentName: Rt_ Foot
+      position: {x: -0.10899288, y: 0.14791514, z: -0.0008036196}
+      rotation: {x: -0.000000015454313, y: 0.000000015454313, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rt_Toe_End
+      parentName: Rt_Toe_Root
+      position: {x: -0.06478599, y: 0, z: -0.000000014901161}
+      rotation: {x: 0, y: -9.688924e-16, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine02
+      parentName: Spine01
+      position: {x: -0.16427016, y: -0.0001304876, z: -3.6146375e-10}
+      rotation: {x: 8.332008e-13, y: -0.0000001457502, z: 0.03489942, w: 0.99939084}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Spine03
+      parentName: Spine02
+      position: {x: -0.16427243, y: -0.00013061613, z: -3.6334313e-10}
+      rotation: {x: 0.0000000050655107, y: -0.00000010949347, z: 0.026176961, w: 0.99965733}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck
+      parentName: Spine03
+      position: {x: -0.2400688, y: 0.0028474927, z: 0.00000002952902}
+      rotation: {x: 3.6152342e-14, y: 0.00000033801683, z: -0.12186935, w: 0.99254614}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Lt_Clavicle
+      parentName: Neck
+      position: {x: 0.06339049, y: 0.014232814, z: 0.056641057}
+      rotation: {x: -0.62459904, y: -0.07694463, z: 0.7713154, w: -0.09501651}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Lt_UpperArm
+      parentName: Lt_Clavicle
+      position: {x: -0.15906885, y: -0.000000014901161, z: 0}
+      rotation: {x: 0.076874726, y: 0.08966502, z: -0.009895536, w: 0.9929514}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Lt_ Forearm
+      parentName: Lt_UpperArm
+      position: {x: -0.4073007, y: 0, z: 0}
+      rotation: {x: -0.0011822061, y: 0.010018789, z: 0.037704688, w: 0.999238}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Lt_ Hand
+      parentName: Lt_ Forearm
+      position: {x: -0.28432918, y: -0.000000007450581, z: 0}
+      rotation: {x: -0.70464635, y: -0.055501066, z: -0.055456866, w: 0.70520765}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Lt_ ThumbRoot
+      parentName: Lt_ Hand
+      position: {x: -0.030369401, y: 0.01871574, z: -0.03473156}
+      rotation: {x: 0.58182275, y: -0.2554994, z: 0.20459144, w: 0.7445433}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Lt_Thumb_End
+      parentName: Lt_ ThumbRoot
+      position: {x: -0.046237588, y: 0, z: -0.000000029802322}
+      rotation: {x: 0.0000000031314022, y: 0.0000000070124826, z: -0.17410812, w: 0.98472655}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Lt_ Finger01_Root
+      parentName: Lt_ Hand
+      position: {x: -0.12346393, y: -0.008430719, z: -0.01854425}
+      rotation: {x: -0.011497703, y: 0.006880967, z: 0.015939808, w: 0.9997832}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Lt_Finger01_End
+      parentName: Lt_ Finger01_Root
+      position: {x: -0.04588759, y: -0.000000029802322, z: 0}
+      rotation: {x: 0.000000009931197, y: 0.0000000133763605, z: -0.17410813, w: 0.98472655}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Lt_Finger02_Root
+      parentName: Lt_ Hand
+      position: {x: -0.12012166, y: -0.0036274195, z: 0.034423597}
+      rotation: {x: -0.17885257, y: 0.023763454, z: 0.014063823, w: 0.9834883}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Lt_Finger02_End
+      parentName: Lt_Finger02_Root
+      position: {x: -0.041939437, y: 0, z: 0.000000029802322}
+      rotation: {x: 0.0000000029782723, y: -0.0000000043457415, z: -0.18353863, w: 0.9830125}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Rt_Clavicle
+      parentName: Neck
+      position: {x: 0.06339049, y: 0.014233053, z: -0.053534836}
+      rotation: {x: 0.6110424, y: 0.07527248, z: 0.7820988, w: -0.09634661}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rt_ UpperArm
+      parentName: Rt_Clavicle
+      position: {x: -0.15906888, y: 0, z: 0.00000011920929}
+      rotation: {x: -0.080583416, y: -0.106590725, z: -0.011088545, w: 0.9909702}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Rt_Forearm
+      parentName: Rt_ UpperArm
+      position: {x: -0.4073007, y: -0.000000014901161, z: 0}
+      rotation: {x: 0.0013479587, y: -0.010626187, z: 0.037379913, w: 0.9992438}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Rt_Hand
+      parentName: Rt_Forearm
+      position: {x: -0.28432918, y: 0, z: 0}
+      rotation: {x: 0.70464635, y: 0.055501048, z: -0.05545688, w: 0.70520765}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Rt_ThumbRoot
+      parentName: Rt_Hand
+      position: {x: -0.03173858, y: 0.022350848, z: 0.046616063}
+      rotation: {x: -0.66761386, y: 0.22494937, z: 0.23933628, w: 0.66813743}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Rt_Thumb_End
+      parentName: Rt_ThumbRoot
+      position: {x: -0.047148764, y: 0, z: 0}
+      rotation: {x: -0.41616344, y: 0.07358127, z: -0.15779553, w: 0.89246535}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Rt_Finger01_Root
+      parentName: Rt_Hand
+      position: {x: -0.12063289, y: -0.0064247847, z: 0.021569297}
+      rotation: {x: 0.009901787, y: -0.009697548, z: 0.014586427, w: 0.9997976}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Rt_Finger01_End
+      parentName: Rt_Finger01_Root
+      position: {x: -0.048607886, y: 0, z: 0.000000029802322}
+      rotation: {x: 0.000000008410762, y: -0.00000001661938, z: -0.17410816, w: 0.98472655}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Rt_Finger02_Root
+      parentName: Rt_Hand
+      position: {x: -0.12463158, y: 0.00813061, z: -0.03242229}
+      rotation: {x: 0.3055127, y: -0.020115357, z: 0.019808235, w: 0.95176935}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Rt_Finger02_End
+      parentName: Rt_Finger02_Root
+      position: {x: -0.0430758, y: -0.000000029802322, z: 0.000000059604645}
+      rotation: {x: -0.000000016553232, y: -0.00000002512999, z: -0.20059332, w: 0.97967464}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Head
+      parentName: Neck
+      position: {x: -0.062164545, y: 0.0051695406, z: 0.0000000071026705}
+      rotation: {x: -0.000000019098824, y: 0.000000034112574, z: 0.017851243, w: 0.9998407}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftEyeball
+      parentName: Head
+      position: {x: -0.13009, y: 0.09058501, z: 0.035376187}
+      rotation: {x: -0.5303708, y: 0.42846704, z: 0.5604809, w: 0.47008935}
+      scale: {x: 0.009995503, y: 0.009995501, z: 0.009995502}
+    - name: RightEyeball
+      parentName: Head
+      position: {x: -0.12973678, y: 0.09044381, z: -0.03424871}
+      rotation: {x: -0.5303708, y: 0.42846704, z: 0.5604809, w: 0.47008935}
+      scale: {x: 0.009995503, y: 0.009995501, z: 0.009995502}
+    - name: Helmet
+      parentName: Head
+      position: {x: -0.13399184, y: 0.033588305, z: -0.003066784}
+      rotation: {x: -0.5303708, y: 0.42846704, z: 0.5604809, w: 0.47008935}
+      scale: {x: 0.009995503, y: 0.009995501, z: 0.009995502}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
