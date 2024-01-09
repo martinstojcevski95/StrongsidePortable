@@ -45,20 +45,22 @@ public class ScreenCaptureManager : MonoBehaviour
     public void StartCapture(string formationId)
     {
         captureCount = 0;
-        LoadingManager.Instance.CloseLoadingScreen("");
         StartCoroutine(CaptureScreenAndSaveCoroutine(formationId, CaptureScreenshotsFinished));
     }
 
     private void CaptureScreenshotsFinished(List<byte[]> list, string formationId)
     {
+        Debug.Log("CAPTURING FINISHED");
+        LoadingManager.Instance.OpenLoading("Uploading screenshots please wait");
+
         captureCount = 0;
         StartCoroutine(UploadScreenShotToDb(OnScreenshotsUploaded, formationId));
     }
 
     private void OnScreenshotsUploaded()
     {
-        LoadingManager.Instance.CloseLoadingScreen("Uploading captures finished!", 1f);
         imagesBytes.Clear();
+        LoadingManager.Instance.CloseLoadingScreen("Uploading finished", 1.3f);
         OnCaptureFinished?.Invoke();
     }
 
@@ -85,7 +87,35 @@ public class ScreenCaptureManager : MonoBehaviour
         captureCount = 0;
         callback?.Invoke(imagesBytes, formationId);
     }
+    private IEnumerator CaptureAndSave()
+    {
+        yield return new WaitForEndOfFrame();
 
+        // Capture screenshot
+        Texture2D screenshotTexture = ScreenCapture.CaptureScreenshotAsTexture();
+
+        // Convert the texture to bytes
+        byte[] screenshotBytes = screenshotTexture.EncodeToPNG();
+
+        // Save the screenshot to the persistent data path
+        string fileName = "Screenshot_" + System.DateTime.Now.ToString("yyyyMMddHHmmss") + ".png";
+        string filePath = System.IO.Path.Combine(Application.persistentDataPath, fileName);
+        System.IO.File.WriteAllBytes(filePath, screenshotBytes);
+
+        // Save the screenshot to the Android device's gallery
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+
+            // MediaStore.Images.Media.insertImage is used to add the image to the gallery
+            AndroidJavaClass mediaClass = new AndroidJavaClass("android.provider.MediaStore.Images.Media");
+            mediaClass.CallStatic("insertImage", currentActivity.Call<AndroidJavaObject>("getContentResolver"),
+                                  filePath, fileName, "Captured with Unity");
+        }
+
+        Debug.Log("Screenshot saved to: " + filePath);
+    }
 
     private IEnumerator UploadScreenShotToDb(Action callback, string formationId)
     {

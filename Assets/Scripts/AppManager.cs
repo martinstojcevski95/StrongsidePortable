@@ -23,7 +23,7 @@ public class AppManager : MonoBehaviour
     [SerializeField] Switch accountSwitch, positionSwitch, stanceSwitch;
     [SerializeField] TMP_Text currentAccountText, currentFormation, currentStance;
 
-    [SerializeField] Button LogIn, loadMore, changePlayerStance, applyStance, updateFormation;
+    [SerializeField] Button SignIn, loadMore, changePlayerStance, applyStance, updateFormation, DragMode;
 
     public static Action<ApiResponse, string> OnFormationUpdated;
 
@@ -31,7 +31,7 @@ public class AppManager : MonoBehaviour
     private string demopass = "Apshgc@1", martinpass = "Abcdef@1";
 
     public static event Action<string, string> OnLoginEvent;
-
+    public static event Action<bool> inDragMode;
 
 
     public static event Action<string> OnCloseLoading;
@@ -42,6 +42,8 @@ public class AppManager : MonoBehaviour
     [SerializeField] Switch updatedFormations;
     public FormationsResponse formationResult;
     public FormationsResponse unUpdatedResult;
+
+    [SerializeField] TMP_InputField emailInput, passwordInput;
 
     [SerializeField] Transform offenseListParent, unUpdatedListParent;
     [SerializeField] GameObject offenseItemPrefab;
@@ -55,14 +57,16 @@ public class AppManager : MonoBehaviour
     private bool isDemoAccount = true;
     private string token;
 
-    private int maxResultLimit = 250;
+    private int maxResultLimit = 1500;
     private int currentResultLimit = 25;
     private int limit = 25;
     int index = 0;
     public PlayerItem currentPlayer;
     [SerializeField] Canvas SaveScreenshotsPopUp;
     [SerializeField] Button yes, no;
-    
+    bool signInAsGuest = false;
+    public bool drawingMode = false;
+    string currentEmail, currentPassword;
 
     public string Token
     {
@@ -82,9 +86,12 @@ public class AppManager : MonoBehaviour
 
     private void Start()
     {
-        versionNumber.text = "ver 0.0.8";
-        currentAccountText.text = "Using Demo Account";
-        LogIn.onClick.AddListener(OnLogin);
+        drawingMode = false;
+        var userEmail = signInAsGuest == false ? emailInput.text = demoemail : emailInput.text = "";
+        versionNumber.text = "ver 0.1.7";
+        currentEmail = demoemail;
+        currentPassword = demopass;
+        SignIn.onClick.AddListener(() => SigninIn(signInAsGuest));
         loadMore.onClick.AddListener(LoadMore);
         accountSwitch.OnValueChanged.AddListener(OnValueChanged);
         updatedFormations.IsOn = true;
@@ -98,7 +105,9 @@ public class AppManager : MonoBehaviour
 
         yes.onClick.AddListener(SaveScreenshots);
         no.onClick.AddListener(DontSaveScreenshots);
+
     }
+
 
     private void DontSaveScreenshots()
     {
@@ -118,8 +127,10 @@ public class AppManager : MonoBehaviour
             LoadingManager.Instance.CloseLoadingScreen("Please select player first!", 1.5f);
             return;
         }
+
         index = (index + 1) % currentPlayer.playerStances.Count;
         OnClickedPlayer(currentPlayer.playerStances[index], currentPlayer.offensePersonnel.positionAlias);
+        SetPlayerStance();
     }
 
     private void SetPlayerStance()
@@ -133,15 +144,31 @@ public class AppManager : MonoBehaviour
         currentStance.text = currentPlayer.offensePersonnel.positionAlias + " - " + currentPlayer.playerStances[index];
     }
 
-    private void OnLogin()
+    private void SigninIn(bool isGuest = false)
     {
-        LoadingManager.Instance.OpenLoading("Login in please wait");
-        var user = new UserRequest(!accountSwitch.IsOn ? demoemail : martinemail, !accountSwitch.IsOn ? demopass : martinpass);
+        if (signInAsGuest)
+        {
+            LoadingManager.Instance.OpenLoading("Signin in as demo user, please wait");
+        }
+
+        else
+        {
+            LoadingManager.Instance.OpenLoading("Signin as <b>Demo</b> user, please wait");
+        }
+
+        var user = new UserRequest(currentEmail, currentPassword);
+        Debug.Log(JsonUtility.ToJson(user));
         APIManager.Instance.POST(APIManager.log_in, APIManager.Instance.ConvertJsonToString(user), OnLogInResponse);
     }
 
     private void OnLogInResponse(string response)
     {
+        if (response.StartsWith("Email"))
+        {
+            LoadingManager.Instance.CloseLoadingScreen("Email or pasword wrong, please check your credentials", 1.5f);
+            return;
+        }
+
         var userResponse = JsonUtility.FromJson<UserResponse>(response);
         Token = userResponse.token;
         team.text = "Team - " + userResponse.accountName;
@@ -183,15 +210,13 @@ public class AppManager : MonoBehaviour
 
     private void GetFormationResults(int stepLimit)
     {
-        LoadingManager.Instance.OpenLoading("Loading formations please wait");
+        LoadingManager.Instance.OpenLoading("Loading formation templates, please wait...");
         var requestBody = new FormationSearchRequestBody();
         requestBody.limit = stepLimit;
         requestBody.page = 1;
         requestBody.recentUpdate = true;
         APIManager.Instance.POST(APIManager.latest_offense_data, JsonUtility.ToJson(requestBody), OnFormationsResponseReceived);
     }
-
-
 
     public void ClearAllFormationItems()
     {
@@ -201,20 +226,42 @@ public class AppManager : MonoBehaviour
         }
 
     }
-
-
     public void FilterOffenseItems(bool status)
     {
         updatedFormations.IsOn = status;
 
+        int countModifiedByEmpty = 0;
+        int countModifiedByNotEmpty = 0;
+
         foreach (Transform item in offenseListParent)
         {
             var offItem = item.GetComponent<OffenseItem>();
-            item.gameObject.SetActive(updatedFormations.IsOn ? offItem.itemData.modifiedBy == "" : offItem.itemData.modifiedBy != "");
+            bool isModifiedByEmpty = offItem.itemData.modifiedBy == "";
+
+            item.gameObject.SetActive(updatedFormations.IsOn ? isModifiedByEmpty : !isModifiedByEmpty);
+
+            // Update counts based on conditions
+            if (isModifiedByEmpty)
+            {
+                countModifiedByEmpty++;
+            }
+            else
+            {
+                countModifiedByNotEmpty++;
+            }
+        }
+
+        if (updatedFormations.IsOn)
+        {
+            loadedFormationsCount.text = $"Loaded {countModifiedByEmpty} un-updated formations";
+        }
+        else
+        {
+            loadedFormationsCount.text = $"Loaded {countModifiedByNotEmpty} updated formations";
         }
 
         scrollBar.value = 1;
-        updatedFormationTxt.text = !updatedFormations.IsOn ? "UPDATED FORMATIONS" : "NOT UPDATED FORMATIONS ";
+        updatedFormationTxt.text = !updatedFormations.IsOn ? "UPDATED FORMATIONS" : "NOT UPDATED FORMATIONS";
     }
 
     private void OnFormationsResponseReceived(string response)
@@ -222,23 +269,42 @@ public class AppManager : MonoBehaviour
         scrollBar.value = 1;
 
         formationResult = JsonUtility.FromJson<FormationsResponse>(response);
-
-        loadedFormationsCount.text = "Loaded formations " + formationResult.result.Count;
-
-        for (int i = 0; i < formationResult.result.Count; i++)
+        if (formationResult.count == 0)
         {
-
-            GameObject go = Instantiate(offenseItemPrefab);
-            go.transform.SetParent(offenseListParent, false);
-            go.GetComponent<OffenseItem>().SetItemData(formationResult.result[i]);
-
+            LoadingManager.Instance.CloseLoadingScreen("This account doesn't have any pre-created formation, please create one from the web or desktop app first", 8f);
+            return;
+        }
+        int lastFormation = formationResult.result.Count - 1;
+        if (formationResult.result[lastFormation].modifiedBy != "")
+        {
+            formationResult.result.Clear();
+            if (currentResultLimit < maxResultLimit)
+            {
+                currentResultLimit += limit;
+            }
+            GetFormationResults(currentResultLimit);
         }
 
-        FilterOffenseItems(updatedFormations.IsOn);
-        scrollBar.value = 1;
-        LoginMenu.gameObject.SetActive(false);
-        MainMenu.gameObject.SetActive(true);
-        LoadingManager.Instance.CloseLoadingScreen("");
+        else
+        {
+
+
+            for (int i = 0; i < formationResult.result.Count; i++)
+            {
+
+                GameObject go = Instantiate(offenseItemPrefab);
+                go.transform.SetParent(offenseListParent, false);
+                go.GetComponent<OffenseItem>().SetItemData(formationResult.result[i]);
+
+            }
+
+            FilterOffenseItems(updatedFormations.IsOn);
+            scrollBar.value = 1;
+            LoginMenu.gameObject.SetActive(false);
+            MainMenu.gameObject.SetActive(true);
+            LoadingManager.Instance.CloseLoadingScreen("");
+        }
+
 
     }
 
@@ -258,31 +324,32 @@ public class AppManager : MonoBehaviour
 
     public void UnUpdatedFormationsLoad(bool status)
     {
-        //  updatedFormationsFilter = status;
         updatedFormations.IsOn = status;
-
         updatedFormationTxt.text = updatedFormations.IsOn ? "Not Updated Formations" : "Updated Formations";
         updatedFormationTxt.color = updatedFormations.IsOn ? Color.red : Color.cyan;
         GetFormationResults(updatedFormations.IsOn ? 100 : currentResultLimit);
 
     }
 
-    //private void OnLogin()
-    //{
-    //    LoginMenu.gameObject.SetActive(false);
-    //    if (!isDemoAccount)
-    //        OnLoginEvent?.Invoke(demoemail, demopass);
-    //    else
-    //        OnLoginEvent?.Invoke(martinemail, martinpass);
-    //}
-
     private void OnValueChanged(bool isOn)
     {
         isDemoAccount = isOn;
         if (isOn)
+        {
             currentAccountText.text = "Using Martin's Account";
+
+            currentEmail = martinemail;
+            currentPassword = martinpass;     
+        }
+
         else
+        {
             currentAccountText.text = "Using Demo Account";
+            currentEmail = demoemail;
+            currentPassword = demopass;
+        }
+
+        Debug.Log(currentEmail);
     }
 
     public void ToggleOrientation(bool landscape)
@@ -311,7 +378,7 @@ public class AppManager : MonoBehaviour
     private void OnCaptureAndFormationSaveFinished()
     {
         updateFormation.enabled = true;
-     
+
     }
 
     private void OnSelectedPlayer(PlayerItem obj)
@@ -326,6 +393,8 @@ public class AppManager : MonoBehaviour
         for (int i = 0; i < formationData.playerPositions.Count; i++)
         {
             var player = playerObjects[i].GetComponent<PlayerItem>();
+            var playerDrag = playerObjects[i].GetComponent<DraggableItem>();
+            playerDrag.initialPosition = new Vector3(formationData.playerPositions[i].position.x, 0, formationData.playerPositions[i].position.y);
             player.transform.position = new Vector3(formationData.playerPositions[i].position.x, 0, formationData.playerPositions[i].position.y);
             if (formationData != currentItem)
                 player.defaultStance = formationData.playerPositions[i].playerStance;
@@ -398,12 +467,18 @@ public class AppManager : MonoBehaviour
         saveScreenshotsText.text = "Do you want to save screenshots for this formation ?";
     }
     private void OnUpdateResponseReceived(ApiResponse fullResponse, string result)
-    {      
-        LoadingManager.Instance.CloseLoadingScreen($"Formation Updated Successfully!", 1.5f);
-        ShowPopupForSaveScreenShots(true);
-         OnFormationUpdated?.Invoke(fullResponse, currentItem.id);
+    {
+        LoadingManager.Instance.CloseLoadingScreen($"Formation Updated Successfully!", 1.3f);
+        StartCoroutine((DelayedPopupForSaveScreenshots(1.5f)));
+        OnFormationUpdated?.Invoke(fullResponse, currentItem.id);
     }
 
+    IEnumerator DelayedPopupForSaveScreenshots(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SaveScreenshotsPopUp.enabled = true;
+        saveScreenshotsText.text = "Do you want to save screenshots for this formation ?";
+    }
 
     public void PlayerStanceActivation(bool status)
     {

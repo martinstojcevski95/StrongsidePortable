@@ -44,143 +44,11 @@ public class APIManager : MonoBehaviour
     bool initial = false;
 
 
-
-
-
     private void Awake()
     {
         Instance = this;
     }
 
-    //private void OnEnable()
-    //{
-    //    //AppManager.OnLoginEvent += OnLogin;
-    //    //  updatedFormations.IsOn = true;
-    //    // updatedFormations.OnValueChanged.AddListener(UnUpdatedFormationsLoad);
-    //}
-
-
-    //public void UnUpdatedFormationsLoad(bool status)
-    //{
-    //    updatedFormationsFilter = status;
-    //    Debug.Log(updatedFormationsFilter);
-    //    var txt = updatedFormations.transform.GetChild(1).GetComponent<TMP_Text>();
-    //    txt.text = updatedFormationsFilter ? "Not Updated Formations" : "Updated Formations";
-    //    txt.color = updatedFormationsFilter ? Color.red : Color.cyan;
-    //    GetFormationResults(updatedFormationsFilter ? 100 : currentResultLimit);
-    //}
-
-
-
-
-    //private void OnLogin(string email, string pass)
-    //{
-    //    Debug.Log(email);
-    //    Debug.Log(pass);
-    //    AppManager.Instance.OpenLoading("Loading please wait...");
-    //    var user = new UserRequest(email, pass);
-    //    StartCoroutine(PostRqeuest(log_in, ConvertJsonToString(user), OnUserLoggedIn));
-    //}
-
-    //public void GetOffenseBasePersonnel(Action<string> callback)
-    //{
-    //    GET(offense_base_personnel, callback);
-    //}
-
-
-
-    //public void LoadMore()
-    //{
-    //    formationResult = null;
-
-    //    if (currentResultLimit < maxResultLimit)
-    //    {
-    //        currentResultLimit += limit;
-    //    }
-    //    GetFormationResults(currentResultLimit);
-    //}
-
-
-    //public void BackToLogIn()
-    //{
-    //    foreach (Transform child in offenseListParent)
-    //    {
-    //        Destroy(child.gameObject);
-    //    }
-
-    //}
-
-
-
-
-    //private void OnUserLoggedIn(string response)
-    //{
-    //    PlayerPrefs.DeleteAll();
-    //    userResponse = JsonUtility.FromJson<UserResponse>(response);
-    //    PlayerPrefs.SetString("token", userResponse.token);
-    //    Debug.Log(userResponse.token);
-    //    token = userResponse.token; // PlayerPrefs.GetString("token");
-    //    team.text = "Team - " + userResponse.accountName;
-    //    role.text = "Role - " + userResponse.role;
-
-    //    GET(default_base_formation, OnBaseFormationResponseReceived);
-
-    //}
-
-
-    //private void GetFormationResults(int stepLimit)
-    //{
-    //    AppManager.Instance.OpenLoading("Loading formations please wait...");
-    //    var requestBody = new FormationSearchRequestBody();
-    //    requestBody.limit = stepLimit;
-    //    requestBody.page = 1;
-    //    requestBody.recentUpdate = true;
-    //    Debug.Log(JsonUtility.ToJson(requestBody));
-    //    POST(latest_offense_data, JsonUtility.ToJson(requestBody), OnFormationsResponseReceived);
-    //}
-
-    //private void OnFormationsResponseReceived(string obj)
-    //{
-    //    scrollBar.value = 1;
-    //    BackToLogIn();
-
-    //    formationResult = JsonUtility.FromJson<FormationsResponse>(obj);
-    //    loadedFormationsCount.text = "Loaded formations - " + formationResult.result.Count.ToString();
-    //    for (int i = 0; i < formationResult.result.Count; i++)
-    //    {
-    //        if (updatedFormationsFilter)
-    //        {
-    //            if (formationResult.result[i].modifiedBy != "") continue;
-    //        }
-
-    //        else
-    //        {
-    //            if (formationResult.result[i].modifiedBy == "") continue;
-    //        }
-
-
-    //        Debug.Log(formationResult.result.Count);
-    //        GameObject go = Instantiate(offenseItemPrefab);
-    //        go.transform.SetParent(offenseListParent, false);
-    //        go.GetComponent<OffenseItem>().SetItemData(formationResult.result[i]);
-
-    //    }
-
-    //    AppManager.Instance.MainMenu.gameObject.SetActive(true);
-    //    AppManager.Instance.ClearLoading();
-
-    //}
-
-    //private void OnBaseFormationResponseReceived(string obj)
-    //{
-    //    var result = JArray.Parse(obj);
-    //    var response = $@"{{""Items"": {result}}}";
-    //    baseFormation = JsonUtility.FromJson<BaseFormationResponse>(response);
-
-
-    //    GetFormationResults(currentResultLimit);
-
-    //}
 
     public string ConvertJsonToString(object json)
     {
@@ -243,7 +111,7 @@ public class APIManager : MonoBehaviour
 
         if (uwr.result == UnityWebRequest.Result.ConnectionError || uwr.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error: " + uwr.error);
+            callback?.Invoke(uwr.downloadHandler.text);
         }
         else
         {
@@ -464,6 +332,16 @@ namespace StrongSideAPI
         public string thumbnailUrl;
     }
 
+
+    [Serializable]
+    public class ForTest
+    {
+        public SingleFormationResponse[] result;
+        public int count;
+        public object errorCode;
+        public object errorMsg;
+        public bool success;
+    }
 
     [Serializable]
     public class FormationsResponse

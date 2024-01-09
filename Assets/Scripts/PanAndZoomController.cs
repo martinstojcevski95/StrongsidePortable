@@ -25,30 +25,30 @@ public class PanAndZoomController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-    
+        InGame = true;
         isPanning = true;
 
     }
 
     private void OnEnable()
     {
-       // OffenseItem.OnItemClicked += EnablePanning;
+        // OffenseItem.OnItemClicked += EnablePanning;
         DraggableItem.OnPlayerDragStart += PausePanning;
         DraggableItem.OnPlayerDragStop += ResumePanning;
     }
 
     private void OnDisable()
     {
-       // OffenseItem.OnItemClicked -= EnablePanning;
+        // OffenseItem.OnItemClicked -= EnablePanning;
         DraggableItem.OnPlayerDragStart -= PausePanning;
         DraggableItem.OnPlayerDragStop -= ResumePanning;
 
     }
 
-   // private void EnablePanning(APIManager.SingleFormationResponse obj)
-   // {
-   //     ResumePanning();
-   // }
+    // private void EnablePanning(APIManager.SingleFormationResponse obj)
+    // {
+    //     ResumePanning();
+    // }
 
     public void PausePanning()
     {
@@ -139,7 +139,7 @@ public class PanAndZoomController : MonoBehaviour
                     transform.position = new Vector3(
                       Mathf.Clamp(transform.position.x, -13f, 13f),
                       Mathf.Clamp(transform.position.y, transform.position.y, transform.position.y),
-                      Mathf.Clamp(transform.position.z, -40, 40));               
+                      Mathf.Clamp(transform.position.z, -40, 40));
 
                 }
 
@@ -159,5 +159,3 @@ public class PanAndZoomController : MonoBehaviour
     float mouseSensitivity = .070f;
     Vector3 lastPosition;
 }
-
-

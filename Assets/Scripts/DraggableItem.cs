@@ -7,42 +7,95 @@ using UnityEngine;
 public class DraggableItem : MonoBehaviour
 {
     private Vector3 offset;
-    private Vector3 initialPosition;
-    private bool isDragging = false;
+    public Vector3 initialPosition;
+
 
     [SerializeField] private Color normal, pressed;
     [SerializeField] private SkinnedMeshRenderer body;
 
-    private void Awake()
+    private Vector3 originalPosition;
+    private bool isDragging = false;
+    private float dragThreshold = 0.1f;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        initialPosition = transform.position;
-        body.material.color = normal;
+        originalPosition = transform.position;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            // Perform a raycast from the input position
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetMouseButtonDown(0) ? Input.mousePosition : (Vector3)Input.GetTouch(0).position);
+            RaycastHit hit;
+
+            // Check if the ray hits this object
+            if (Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
+            {
+                // Calculate the offset from the object's position to the touch/mouse position
+                offset = hit.point - transform.position;
+                body.material.color = pressed;
+                // Set a positive offset on the z-axis, slightly above the cursor/finger
+                offset.z = Mathf.Abs(offset.z) - 3.5f;
+                ChangeColor(pressed);
+                // Reset dragging state
+                isDragging = false;
+            }
+        }
+
+        // Check if the mouse is held down or there is a touch
+        if (Input.GetMouseButton(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved))
+        {
+            // Move the object to the new position
+            MoveObject();
+
+            // Object is being dragged
+            isDragging = true;
+        }
+
+        // Check if the mouse is released or touch ends
+        if (Input.GetMouseButtonUp(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended))
+        {
+            // If the object was not dragged, reset its position
+            if (!isDragging)
+            {
+
+                ResetObject();
+            }
+            ChangeColor(normal);
+            Debug.Log("released");
+            // Reset dragging state
+            isDragging = false;
+        }
+    }
+
+    private void MoveObject()
+    {
+        Vector3 targetPosition = GetInputWorldPosition() - offset;
+        targetPosition.y = transform.position.y; // Ensure consistent height
+        transform.position = targetPosition;
+    }
+    private void ChangeColor(Color newColor)
+    {
+        body.material.color = newColor;
+    }
     private void OnMouseDown()
     {
-        offset = transform.position - GetInputWorldPosition();
-        isDragging = true;
-        body.material.color = pressed;
-        initialPosition = transform.position;
         OnPlayerDragStart?.Invoke();
     }
 
     private void OnMouseUp()
     {
-        body.material.color = normal;
-        isDragging = false;
         OnPlayerDragStop?.Invoke();
     }
 
-    private void Update()
+    private void ResetObject()
     {
-        if (isDragging)
-        {
-            Vector3 targetPosition = GetInputWorldPosition() + offset;
-            targetPosition.y = transform.position.y;
-            transform.position = targetPosition;
-        }
+        transform.position = originalPosition;
+        ChangeColor(normal);
     }
 
     private Vector3 GetInputWorldPosition()
@@ -62,4 +115,3 @@ public class DraggableItem : MonoBehaviour
 
     public static event Action OnPlayerDragStart, OnPlayerDragStop;
 }
-
